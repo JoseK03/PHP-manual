@@ -149,7 +149,7 @@ los arrays asociativos permiten asociar las claves con sus valores a diferencia 
     
     //* Ordenar arreglo asociativo
     $cliente = array(
-        'saldo' => 200,
+        'saldo' => 250,
         'tipo' => 'Premium',
         'nombre' => 'Jose'
     );
