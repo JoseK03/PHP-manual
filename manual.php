@@ -158,11 +158,172 @@ los arrays asociativos permiten asociar las claves con sus valores a diferencia 
     arsort($clientes); //todo Ordenar por valores (Z primero)
     ksort($clientes); //todo Ordena por llaves (ordern alfabetico)
     krsort($clientes); //todo Ordenar por llaves (orden alfabetico, DE LA A a la Z); 
-
-
-
-
     ?>
 
+//? Isset() y Empty()
+En PHP se utilizan para verificar si una variable o elemento de un array tiene un valor definido o no. Isset muestra si está definida y Empty si no lo está
+
+
+
+    <?php
+        $LaVariable = "Hola";
+
+        if(isset($LaVariable)){
+            echo "La variable si está definida y tiene valor";
+        }else{
+            echo "la variable no está definida y no tiene valor";
+        }
+
+        $OtraVariable = "";
+
+        if(empty($OtraVariable)){
+            echo "la varible está vacía y no está definida";
+        }else{
+            echo "la variable está definida y no está vacía";
+        }
+    ?>
+
+//? Estructuras de control 
+Herramientas que se utilizan para controlar el flujo de ejecucion de un programa
+las mas ultizadas son //todo-- If --- switch --- for --- while -- do-while --- try catch 
+
+//? IF 
+Estructura de control que permite tomar decisiones en funcion de si se cumple o no una condicion 
+
+    <?php
+        if ("Condicion") {
+            //* Intrucciones a seguir una vez la condicion se haya cumplido
+        }else if("Otra condicion"){
+            //* Intrucciones a seguir una vez la condicion se haya cumplido
+        }else{//*else es para cuando ninguna condicion se cumpla se ejecute otra accion
+            //* Intrucciones a seguir cuando ninguna condicion se haya cumplido
+        }
+        //todo--- Ejemplo:
+        $numero = 5;
+
+        if($numero > 10){
+            echo "el numero es mayor que 10";
+        }else if($numero = 5){
+            echo "el numero es igual a 5";
+        }else{
+            echo "el numero es menor a 10";
+        }
+    ?>
+
+//? switch
+Estructura de control que permite ejecutar diferentes bloques de codigo dependiendo del valor de una variable 
+
+    <?php
+        switch ("expresion") {
+            case $valor1:
+            //* bloque de código si la expresión es igual a valor1
+            break;//! break nos sirve para que una vez ejecutado el codigo se ropa el switch
+            case $valor2:
+            //* bloque de código si la expresión es igual a valor2
+            break;
+            default:
+            //* bloque de código si la expresión no coincide con ninguno de los valores anteriores
+            break;
+            }
+
+            $tecnologia = "HTML";
+
+            switch ($tecnologia) {
+                case 'PHP':
+                    echo "PHP, es un excelente lenguaje!";
+                    break;
+                case 'JavaScript':
+                    echo "Genial, el lenguaje de la web";
+                    break;
+                case 'HTML':
+                    echo "Emmm...";
+                    break;    
+                default:
+                    echo "Algún lenguaje que no sé cual es";
+                    break;
+            }
+    ?>
+
+//? Estructuas repetitivas 
+Permiten la ejecucion de un codigo de manera repetitivas //!  Bucle While   Bucle do-while    Bucle for
+
+    <?php
+        while('condicion'){
+            //* Código a ejecutar mientras la conficion sea verdadera
+        }
+
+        $i = 0;
+
+        while($i < 10){
+            echo $i . "<br>";
+            $i++; //* Incremento
+        }
+        //!------------------------------
+        do {
+            //* Código que se ejecuta sí o sí al menos una ve
+        } while ('condicion');
+
+        $i = 100;
+
+        do {
+            echo $i. "<br>";
+        } while ($i <= 10);
+        //!------------------------------
+        for ('inicializacion';'condicion';'incremento/decremento') { 
+            //* Código a ejecutar en cada iteración
+        }
+    ?>     
+
+//? ForEach
+Metodo sencillo para iterar sobre arrays y objetos 
+    <?php
+        foreach ($variable as $key => $value) {
+            //* Código que se ejecutara tras cada iteracion
+        }
+        
+        $clientes = array('Pedro', 'Juan', 'Karen');
+
+        foreach ($clientes as $cliente) {
+            echo $cliente. "<br>";
+        }
+
+        $clientes = [
+            'nombre' => 'Katherine',
+            'edad' => '22',
+            'profesion' => 'Nutrisionista'
+        ];
+
+        foreach ($clientes as $datos => $valor) {
+            echo $datos . "-" . $valor. "<br>";
+        }
+    ?>
+    //! otro Ejemplo mas elavorado 
+    <?php
+        $productos = [
+            [
+                'nombre' => 'tablet',
+                'precio' => 200,
+                'disponible' => true
+            ],
+            [
+                'nombre' => 'televisor',
+                'precio' => 600,
+                'disponible' => true
+            ],
+            [
+                'nombre' => 'Monitor curvo',
+                'precio' => 400,
+                'disponible' => false
+            ]
+        ];
+
+        foreach ($productos as $producto) {
+            /*//* <li>
+                //todo<p>Producto:<?php echo $producto['nombre'];?></p>
+                //todo<p>Precio: <?php echo $producto['precio'];?></p>
+                //todo<p><?php echo($producto['disponible'])?'Disponible' : 'No Disponible'; ?></p>            
+            //*</li> */
+        }
+    ?>
 
         
