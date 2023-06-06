@@ -83,7 +83,7 @@ En PHP existen varios tipos de datos que permiten almacenar diferentes tipos de 
 
 //?-----Arreglos, Arreglos asociativos y funciones para arreglos-----
 
-Son estructuras de datos que nos permiten alamcenar multiples valores en una sola variable.
+Son estructuras de datos que nos permiten alamcenar multiples valores en una sola variable .
     <?php
         $MiArreglo = array("valor1","valor2","valor3");
 
