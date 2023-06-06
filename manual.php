@@ -110,7 +110,7 @@ los arrays asociativos permiten asociar las claves con sus valores a diferencia 
     <?php
         $ArrayAsociativo = array(
             "clave1" => "valor1",
-            "clave2" => "valor2",
+            "clave2" => "valor2",   
             "clave3" => "valor3",
         );
 
@@ -120,6 +120,49 @@ los arrays asociativos permiten asociar las claves con sus valores a diferencia 
     ?>
 
 //? Arrays asociativos utilizando bucle foreach
+
+    <?php
+        //! Sintaxis basica
+        foreach ($variable as $key => $value) {
+            # code...
+        }
+
+        //todo-- usado a nuestro array  $ArrayAsociativo
+        foreach ($ArrayAsociativo as $clave => $valor) {
+                echo "Clave: ". $clave . ", Valor:". $valor;
+        }
+    ?>
+
+//? otras funciones en arreglos
+
+    <?php
+    //* in_array   Buscar elementos en un arreglo
+    $carrito =['tablet', 'televisor', 'computadora'];
+
+    var_dump( in_array('tablet', $carrito));
+    var_dump( in_array('televisor', $carrito));
+
+    //* Ordenar elementos de un arreglo
+    $numeros = array(1,2,3,4,5,1,2);
+    sort($numeros);//todo de Menor a mayor;
+    rsort($numeros);//todo de Mayor a menor;
+    
+    //* Ordenar arreglo asociativo
+    $cliente = array(
+        'saldo' => 200,
+        'tipo' => 'Premium',
+        'nombre' => 'Jose'
+    );
+
+    asort($cliente); //todo Ordenar por valores (orden alfabetico)
+    arsort($clientes); //todo Ordenar por valores (Z primero)
+    ksort($clientes); //todo Ordena por llaves (ordern alfabetico)
+    krsort($clientes); //todo Ordenar por llaves (orden alfabetico, DE LA A a la Z); 
+
+
+
+
+    ?>
 
 
         
