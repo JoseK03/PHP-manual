@@ -495,4 +495,6 @@ Estructura que define un conjunto de metodos que una clase debe implementar.
         $circulo = new Circulo(5);
         echo $circulo->calcularArea();
     ?>
-    
+
+//? Atuolad 
+(carag automatica) Es una tecnica que permite cargar automaticamente las clases cuando son necesarias sin tener que incluir manualmente los archivos de clase en cada punto del codigo.
