@@ -308,12 +308,12 @@ Metodo sencillo para iterar sobre arrays y objetos
             [
                 'nombre' => 'televisor',
                 'precio' => 600,
-                'disponible' => true
+                'disponible' => false
             ],
             [
                 'nombre' => 'Monitor curvo',
                 'precio' => 400,
-                'disponible' => false
+                'disponible' => true
             ]
         ];
 
