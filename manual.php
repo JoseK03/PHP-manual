@@ -401,4 +401,98 @@ Son funciones que se utilizan para incluir archivos externos en un programa, sus
 
 //! POO EN PHP 
 //TODO---> PROGRAMACION ORIENTADA A OBJETOS
+Los Objetos son entidades que representan conecptos del mundo real y que pueden tener propiedades(atributos) y realizar acciones(metodos).
+Los objetos son la base fundamental y se crean a partir de clases. una clase es un aplatilla o un molde que define las propiedades y comportamientos que tendran los objetos que se creen a partir de ella 
 
+    //*Clase-> Platilla o definicion que describe las caracteristicas de comportamientos de los objetos que se pueden crear a partir de ella.
+
+    //*Objeto-> Es una instancia de la clase. Representa un individuo o entidad especifica y tienen sus propias propiedades y comportamientos.
+
+    //*Atributos-> SOn las propiedades o caracteristicas de un objeto. Definen el estado de un objeto y se representan mediante variables en la clase
+
+    //*Metodos: Acciones o comprtamientos que un objeto puede realizar.
+
+    //*Encapsilacion: Principio que establece que los atributos y metodos deben agruparse en un clase para ocultar los detalles internos y exponer solo una interfaz publica.
+
+    //*Herencia: Mecanismo que permite crear nuevas clases basdas en clases existente 
+
+    //*Polimorfismo: Capacidad de un objeto de tomar diferntes formas o comportarse de diferentes maneras segun el contexto.
+
+//? Modificadores de acceso en PHP.
+Existen 3 modificadores de acceso para controlar la visibilidad de propiedades  y metodos en una clase:
+
+    //todo--PUBLIC-> son accesibles desde cualquier lugar 
+    //todo--PRIVATE->SOlo son accesibles desde de la misma clase en la que se definen.
+    //todo--PROTECTED->Son accesibles dentro de la misma clase y desde clases heredadas(subclases).
+
+//? Clases.
+Plantilla que nos permite definir las caracteristicas y comportamientos de los objetos 
+    <?php
+        class Persona{
+            private $nombre;
+            protected $edad;
+
+            public function __construct($nombre, $edad){
+                $this->nombre = $nombre;
+                $this->edad = $edad;                
+            }
+
+            public function SetNombre($nombre){
+                $this->nombre = $nombre;
+            }
+
+            public function GetNombre(){
+                return $this->nombre;
+            }
+
+            public function SetEdad($edad){
+                $this->edad = $edad;
+            }
+
+            public function GetEdad(){
+                return $this->edad;
+            }
+
+            public function saludar(){
+                echo "Hola, mi nombre es ". $this->nombre; 
+            }
+        }
+    ?>
+
+//? insertar clases 
+    <?php
+        require_once('clases/Persona.php');
+        $alumno = new Persona('Jose Daniel', 23);
+    ?>
+
+//? Herencia 
+Concepto que permite crear clases basadas en clases ya existentes aprovechando y existiendo su funcionalidad.
+
+//? Clases Abstractas 
+Clase que no se puede instanciar directamente, si no que sirve com plantilla o de base para otras clases
+
+//?Interfaces
+Estructura que define un conjunto de metodos que una clase debe implementar. 
+
+    <?php
+        interface Figura{
+            public function calcularArea();
+        }
+
+        class Circulo {
+            private $radio;
+
+            public function __construct($radio){
+                $this->radio = $radio;
+
+            }
+
+            public function calcularArea(){
+                return pi() * pow($this->radio, 2);
+            }   
+        }
+
+        $circulo = new Circulo(5);
+        echo $circulo->calcularArea();
+    ?>
+    
