@@ -368,4 +368,37 @@ Son funciones que permiten recordar un valor al momento de finalizar la ejecucio
     es importante tener en cuenta que para indicar el tipo de dato que va a retornar la funcion se debe utilizar los dos puntos ( : ) seguido del interrogante ( ? ) y el tipo de dato a retornar
 
 //? include , require , include_once , require_once
+Son funciones que se utilizan para incluir archivos externos en un programa, sus diferencias princiaples es:
+    //todo include
+    incluye el archivo al programa varias veces como se desee.
+    //todo include_once
+    solo permite que el archivo se incluya una sola vez.
+    //! require y require_once
+    tienen la misma funcionalidad y diferencia pero con la gran diferencia es que si el archivo que se desea incluir no es encontrado el programa se detendra y no se seguira ejecutando.
+
+//? Json_encode y Json_decode
+
+//todo la function json_encode() se utiliza para convertir un aestructura de datos en PHP en una cadena JSON
+//* La funcion json_decode() en PHP se utiliza para conventir una cadena JSON en una estructura de datos de PHP. Esta funcion toma una cadena JSON y la convierte en un objeto, un array asociativo o un valor segun corresponda.
+
+//!Funciones mas usadas en manipulacion de data:
+
+   - array_flip(): Intercambia las claves con sus valores correspondientes en un array
+   - array_fill(): Rellena un array con un valor especificado.
+   - array_filter(): Filtra los elementos de un array utilizando una funcion de devolucion de llamada.
+   - array_map():Aploca una funcion a cada elemento de un array y devileve un anuevo array con los resultados.
+   - array_reduce():Reduce un array a un solo valor aplicando una funcion de devolucion de llamada.
+   - array_key_exists(): Comprueba si una clave existe en un array.
+   - in_array():Comprueba si un valor existe en un array.
+   - array_rand():Devuelve una o varias claves aleatorias de un array.
+   - array_unique(): Elimina los valores duplicados en un array.
+   - array_intersect(): Devuelve un array con los valores comunes a todos los arrays dados.
+   - array_diff(): devuleve un array con los valores del primer array que no estan presentes en los arrays adicionales.
+   - array_push(): Agrega uno o mas elementos al final del array.
+   - array_pop():Extrae y elimina el ultimo elemento del array.
+   - array_reverse(): Revierte el orden de los elementos de un array.
+   - array_sum(): Devuelve la suma de los elementos de un array númerico.
+
+//! POO EN PHP 
+//TODO---> PROGRAMACION ORIENTADA A OBJETOS
 
