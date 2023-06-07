@@ -326,4 +326,46 @@ Metodo sencillo para iterar sobre arrays y objetos
         }
     ?>
 
-        
+//? Funciones definidas por el usuario
+Son bloques de codigo que se pueden llamar y ejecutar en cualquier parte del un programa para realizar una tarea especifica.
+
+//? Funciones en PHP.
+    function Identificador([p1],[p2]...){
+        Expresiones...
+    }
+    
+//? Funciones que no retornan un valor
+En PHP a estos tipos de funciones se llaman //!  VOID.
+Se utiliza la palabra reservada void aunque no es necesario el uso de esta para su ejecucion: 
+    
+    //*    declare(strict_types=1);
+    //*    function sumar(int $numero1 = 0, array $numero2):void{
+    //*        echo $numero1 + $numero2;
+    //*    }
+    //*    sumar(10,[]);
+    
+    //*    declare(strict_Types=1);
+    //*    function sumatori(int $NUMERO1 = 0, array $NUMERO2){
+    //*        echo $NUMERO1 + $NUMERO2;
+    //*    }
+    //*    sumar(10,[]);
+
+//? Funciones que retornan un valor 
+Son funciones que permiten recordar un valor al momento de finalizar la ejecucion de todas las expresiones
+
+        <?php
+            //declare(strict_types=1);
+            function usuarioAutenticado(bool $autenticado) : ?string {
+                if($autenticado){
+                    return "El Usuario esta autenticado";
+                }else{
+                    return null;
+                }
+            }
+            $usuario = usuarioAutenticado(false);
+            echo $usuario;
+        ?>
+    es importante tener en cuenta que para indicar el tipo de dato que va a retornar la funcion se debe utilizar los dos puntos ( : ) seguido del interrogante ( ? ) y el tipo de dato a retornar
+
+//? include , require , include_once , require_once
+
