@@ -192,5 +192,69 @@ permite modificar la estructura de la tabla
 //? Renombrar columna 
         ALTER TABLE nombre_tabla
         RENAME COLUMN nombre_viejo to nombre_nuevo
+
+//? Modificar tipo de dato
+    ALTER TABLE nombre_tabla
+    MODIFY COLUMN nombre_columna datatype 
+
+//? Constraints
+Son regalas que se aplican a las colimnas de una tabla para mantener la integridad de los datros y asegurar que se cumplan ciertas condiciones.
+definen reglas y limitaciones en los valores que se pueden insertarm actualizar o eliminar en una tabla.
+
+        //*Primary KEY
+        restriccion que se utiliza para identificar de manera ùnica cada fila en una tabla.
+
+        //*FOREIN KEY
+        Restriccion que establece una relacion entre dos tablas 
+
+        //*UNIQUE
+        Restriccion que garantiza que los valores de una columna o conjunto de columnas sean ùnicos en la tabla.
+
+        //*NOT NULL
+        Restriccion que indica que una columna no puede contener valores nulos.
+
+        //*CHECK 
+        Es una resticcion qu epermite definir condiciones especificas para los valores de una columna
         
+//? UPDATE
+Se utiliza para modificar los datos existentes en una tabla.
+        UPDATE nombre_tabla
+        SET clomun1= value1,value2,value3
+        WHERE condicione
+
+//? DELETE
+Se utiliza para eliminar registros existentes en una tabla.
+        DELETE FROM nombre_tabla WHERE condicion.
+
+//? Comandos DQL
+Se utilizan para recuperar y consultar datos de una base de datos.
+    -SELECT -> recupera datos de una o varias tablas 
+    -FROM -> Se usa en conjunto con el comando SELECT para especificar las tablas de donde se deben recuperar los datos.
+    -WHERE -> se usa en conjunto con el comando SELECT para filtrar los registros que se desean filtrar.
+    -ORDER BY -> se utiliza para ordenar los resultados de una consulta SELECT en funcion de una varias columnas. puede ser (ASC)ascendente o (DESC)descendente.
+    -GROUP BY ->se utiliza para grupar filas de una consukta SELECT en conjuntos basados en los valores de una o varias columnas.
+    -HAVING -> Se utiliza en conjunto con la clausula GROUP BY para filtrar los resultados basados en las condiciones de las funciones de agregacion aplicadas a la clausula SELECT 
+ 
+//? Operadores Logicos
+
+        -AND -> permite que se cumplan multiples condiciones, ambas condiciones deben ser verdaderas 
+        -OR -> permite que se cumplean multiples condiciones, pero solo una de ellas debe ser verdaderas.
+        -NOT-> operador que niega la condicion que sigue
+
+//? Operadores de Comparacion
+    = -> igual a  se usa para saber si dos valores son iguales 
+    <> ò != -> se utiliza para verificar si dos valores no son iguales
+    > -> para ver si un valor es mayor que otro
+    < -> para ver si un valor es menor que otro
+    >= -> para ver si un valor es mayor o igual  que otro     
+    <= -> para ver si un valor es menor o mayor que otro    
+
+//? Operador Like
+Operador like en mySQL se utiliza en la clausula WHERE para buscar un patron especifico de una columna
+hay dos caracteres que se usan con like % y _ 
+
+
+//? BETWEEN 
+para seleccionar valores dentro de un rango determinado  este dato puede ser numerico de fecha o texto
+
 
